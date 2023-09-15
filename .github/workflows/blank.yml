@@ -6,7 +6,7 @@ name: First Cron Job
 on:
   # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/15 * * * *"
  
       # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,8 +18,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
         
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
       - run: npm install
@@ -27,3 +27,11 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
       - run: node lottery.js
       - run: echo "$CHAT_ID"
+      - run: echo "$TEST_ID"
+        env:
+          TEST_ID: "1234"
+      - run: echo "$ENV_ID"
+      - run: echo "$ENV_ID"
+        env:
+          ENV_ID: ${{ env.ENV_ID }}
+
