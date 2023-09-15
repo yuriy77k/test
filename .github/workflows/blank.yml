@@ -35,4 +35,5 @@ jobs:
       - run: echo "$ENV_ID"
         env:
           ENV_ID: ${{ vars.ENV_ID }}
+      - run: echo "$TEST_ID"
 
