@@ -17,7 +17,8 @@ const provider =  "https://rpc.callisto.network/"; // CLO main net
 const pk = process.env.SYSTEM_PK;  // Private key should be hidden
 const chatId = process.env.CHAT_ID; // telegram chat ID where to send message
 const BotToken = process.env.BOT_TOKEN; // telegram bot token 
-//console.log(chatId); // check if is settings is loaded
+console.log("ChatID: ",chatId); // check if is settings is loaded
+return;
 
 const lottery = {
     priceTicketInSoy: "10000000000000000000", //10 SOY
