@@ -36,7 +36,7 @@ jobs:
         env:
           ENV_ID: ${{ vars.ENV_ID }}
       - run: echo "$TEST_ID"
-      - run: node lottery.js
+      - run: node test.js
         env:
           CHAT_ID: ${{ secrets.CHAT_ID }}
 
