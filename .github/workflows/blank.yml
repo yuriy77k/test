@@ -20,9 +20,9 @@ jobs:
         
     steps:
       - uses: actions/checkout@v3
-      #- uses: actions/setup-node@v3
-      #  with:
-      #    node-version: "18"
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
       #- run: npm install
       #- run: node lottery.js
       - run: echo "$CHAT_ID"
@@ -36,4 +36,7 @@ jobs:
         env:
           ENV_ID: ${{ vars.ENV_ID }}
       - run: echo "$TEST_ID"
+      - run: node lottery.js
+        env:
+          CHAT_ID: ${{ secrets.CHAT_ID }}
 
