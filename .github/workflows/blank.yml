@@ -5,9 +5,9 @@ name: 2 Cron Job
   # Controls when the workflow will run
 on:
   # Triggers the workflow every 5 minutes
-  schedule:
-   - cron: "35 * * * *"
- #workflow_dispatch:
+  #schedule:
+  # - cron: "35 * * * *"
+  workflow_dispatch:
  
       # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,15 +28,5 @@ jobs:
       - run: echo "$CHAT_ID"
         env:
           CHAT_ID: ${{ secrets.CHAT_ID }}
-      - run: echo "$TEST_ID"
-        env:
-          TEST_ID: "1234"
-      - run: echo "$ENV_ID"
-      - run: echo "$ENV_ID"
-        env:
-          ENV_ID: ${{ vars.ENV_ID }}
-      - run: echo "$TEST_ID"
-      - run: node test.js
-        env:
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+
 
