@@ -6,7 +6,7 @@ name: 2 Cron Job
 on:
   # Triggers the workflow every 5 minutes
   schedule:
-   - cron: "25 * * * *"
+   - cron: "35 * * * *"
  #workflow_dispatch:
  
       # A workflow run is made up of one or more jobs that can run sequentially or in parallel
